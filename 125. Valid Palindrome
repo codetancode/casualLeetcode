@@ -1,0 +1,14 @@
+class Solution:
+    
+    def isPalindrome(self, s: str) -> bool:
+        letters = 'abcdefghijklmnopqrstuvwxyz1234567890'
+        tocom = ""
+        for _ in s:
+            
+            if _.lower() in letters:
+                tocom+=_.lower()
+        # print(tocom)
+        
+        return tocom == tocom[::-1]
+        
+        
