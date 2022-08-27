@@ -1,0 +1,24 @@
+class Solution {
+    public int[] plusOne(int[] digits) {
+        int[] tres = new int[digits.length];
+        int carry = 1;
+        for(int i=digits.length-1;i >= 0;i--){
+            int temp = carry + digits[i]; 
+            tres[i] = temp%10;
+            carry = temp/10;
+        }
+        if(carry > 0){
+            int[] res = new int[tres.length + 1];
+            res[0] = carry;
+            for(int i=0;i < tres.length;i++){
+                res[i+1] = tres[i];
+            }
+            return res;
+        }else{
+            return tres;
+        }
+        
+        
+    
+    }
+}
